@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>提示信息</title>
+  <style>
+  body{
+    margin: 0;
+    background-color: rgba(0,0,0,.8);
+  }
+  .box{
+    width: 500px;
+    height:300px;
+    border-radius: 20px;
+    background-color:#f1f1f1;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+  }
+  .title{
+    height:40px;
+    line-height: 40px;
+    background-color: #c1c1c1;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px 20px 0 0;
+    padding:0 10px;
+  }
+  h3{
+    margin: 0;
+  }
+  span{
+    font-size:25px;
+    font-weight: bold;
+  }
+  p{
+    height: 260px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h3.error{
+    color:red;
+  }
+  h3.success{
+    color:green;
+  }
+  h3.warning{
+    color:gold;
+  }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="title">
+      <h3 class="{{type}}">提示信息</h3>
+      <span>×</span>
+    </div>
+    <p><b>{{msg}}</b></p>
+  </div>
+</body>
+</html>
+<script>
+setTimeout(function(){
+  window.location.href = "{{url}}";
+},2000);
+document.querySelector(".title>span").onclick = function(){
+  window.location.href = "{{url}}";
+}
+</script>

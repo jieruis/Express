@@ -1,0 +1,206 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-family: "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  scroll-behavior: smooth;
+}
+/* 导航条 */
+.navbar-inverse {
+  border-radius: 0;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+}
+.navbar-container {
+  height: 100%;
+  width: 100%;
+}
+/* 导航选项 */
+.ctn {
+  min-width: 1220px;
+  margin: 0;
+}
+.navbar-words {
+  height: 100%;
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.navbar-words > li {
+  padding: 0 20px;
+}
+.navbar-words > li:nth-child(2) > a {
+  color: #e5e5e5;
+  font-weight: 700;
+}
+.navbar-words > li > a {
+  color: hsla(0, 0%, 100%, 0.7);
+  text-decoration: none;
+  font-size: 12px;
+}
+/* logo */
+.logo {
+  margin: 0 0 0 20px;
+}
+.login,
+.shopcart {
+  width: 20px;
+  height: 20px;
+}
+/* 登录，购物车 */
+.login {
+  background: url(../images/login.png) no-repeat -2px -1px;
+  background-size: 40px 40px;
+  margin-right: 32px;
+}
+.login a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.shopcart {
+  background: url(../images/login.png) no-repeat -2px -20px;
+  background-size: 40px 40px;
+  margin: 0 20px 0 0;
+}
+.shopcart a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+section {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 hsla(0, 0%, 40%, 0.1);
+  background: #fff;
+}
+section > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1220px;
+  margin: 0 auto;
+}
+section > div > ul {
+  list-style: none;
+}
+section > div > ul > li {
+  display: inline-block;
+  font-size: 12px;
+  color: #666;
+  line-height: 40px;
+  margin-right: 25px;
+  cursor: pointer;
+}
+section > div > ul > li > a {
+  text-decoration: none;
+  color: #666;
+}
+section > div > ul > li.active {
+  color: #4d4d4d;
+  font-weight: 700;
+}
+section > div > div {
+  display: flex;
+  align-items: center;
+}
+section > div > div > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  font-size: 12px;
+  color: #fff;
+  width: 92px;
+  height: 40px;
+  font-weight: 700;
+  background-image: url(../images/btn.png);
+  background-size: contain;
+}
+section > div > div > span > a {
+  color: #fff;
+  text-decoration: none;
+}
+nav {
+  width: 100%;
+  height: 720px;
+  position: relative;
+  overflow: hidden;
+  overscroll-behavior: contain;
+  background-color: #ccc;
+}
+nav > div > div {
+  opacity: 1;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.2);
+}
+nav > div > div:nth-child(1) {
+  width: 100%;
+  height: 45rem;
+  opacity: 1;
+}
+nav > div > div:nth-child(2) {
+  width: 93.15rem;
+  height: 44.3rem;
+}
+nav > div > div:nth-child(3) {
+  width: 90.3rem;
+  height: 43.6rem;
+}
+nav > div > div:nth-child(4) {
+  width: 87.45rem;
+  height: 42.9rem;
+}
+nav > div > div:nth-child(5) {
+  width: 84.6rem;
+  height: 42.2062rem;
+}
+nav > div > div:nth-child(6) {
+  width: 81.75rem;
+  height: 41.5rem;
+}
+nav > div > div:nth-child(7) {
+  width: 78.9rem;
+  height: 40.8rem;
+}
+nav > div > div:nth-child(8) {
+  width: 76.05rem;
+  height: 40.1rem;
+}
+nav > div > div:nth-child(9) {
+  width: 73.2rem;
+  height: 39.4rem;
+}
+nav > div > div:nth-child(10) {
+  width: 70.35rem;
+  height: 38.7rem;
+}
+nav > div > div:nth-child(11) {
+  width: 67.5rem;
+  height: 38rem;
+}
+#img > img {
+  width: 100%;
+  height: 38.25rem;
+  display: none;
+}
+#img > img:nth-child(1) {
+  display: block;
+}

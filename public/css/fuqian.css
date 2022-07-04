@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #ededed;
+    color: #666;
+    font-size: 14px;
+}
+
+.ctn{
+    min-width: 1220px;
+    margin: 0;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+a:hover,a:focus{
+    text-decoration: none;
+}
+/* 导航条 */
+.navbar-inverse {
+    border-radius: 0;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-inverse{
+    background: black;
+}
+.navbar-container {
+    height: 100%;
+    width: 100%;
+    margin-left: 50px;
+}
+
+/* 导航选项 */
+.navbar-words {
+    height: 100%;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-words>li {
+    padding: 0 20px;
+}
+
+.navbar-words>li:first-child>a {
+    color: #e5e5e5;
+    font-weight: 700;
+}
+
+.navbar-words>li>a {
+    color: hsla(0, 0%, 100%, .7);
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* logo */
+.logo {
+    margin: 0 0 0 20px;
+}
+
+.login,
+.shopcart {
+    width: 20px;
+    height: 20px;
+}
+
+/* 登录，购物车 */
+.login {
+    background: url(../images/login.png)no-repeat -2px -1px;
+    background-size: 40px 40px;
+    margin-right: 20px;
+}
+.login a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.cart-good{
+    clear: both;
+    width: 1220px;
+    min-height: 600px;
+    padding: 30px 0 25px;
+    margin: 0 auto;
+}
+.cart-box{
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+    border-color: rgba(0,0,0,.14);
+    box-shadow: 0 3px 8px -6px rgba(0,0,0,.1);
+}
+.cart-box .title{
+    position: relative;
+    z-index: 10;
+    height: 60px;
+    padding: 0 10px 0 30px;
+    border-bottom: 1px solid #dbdbdb;
+    border-radius: 8px 8px 0 0;
+    background: #fafafa;
+    line-height: 60px;
+    font-size: 18px;
+    color: rgba(0,0,0,.6);
+    font-size: 12px;
+    font-weight: 700;
+}
+.box-inner{
+    padding-bottom: 94px;
+}
+.empty-label{
+    height: 49px;
+    padding: 385px 0 0;
+    background: url(../images/gwc.png) no-repeat center 50px;
+    text-align: center;
+}
+.empty-label h3{
+    font-size: 14px;
+    line-height: 1.5;
+    color: #8d8d8d;
+    margin-bottom: 17px;
+}
+.login-btn{
+    border: 1px solid #5c81e3;
+    color: #fff;
+    background: #678ee7;
+    background-image: linear-gradient(180deg,#678ee7,#5078df);
+    display: inline-block;
+    border-radius: 6px;
+    width: 140px;
+    line-height: 46px;
+    height: 46px;
+    margin: 0 5px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+.link-btn{
+    border: 1px solid #e1e1e1;
+    color: #646464;
+    background-color: #f9f9f9;
+    background-image: linear-gradient(180deg,#fff,#f9f9f9);
+    display: inline-block;
+    border-radius: 6px;
+    width: 140px;
+    line-height: 46px;
+    height: 46px;
+    margin: 0 5px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+footer {
+    background: #fafafa;
+    border-top: 1px solid #e6e6e6;
+    height: 21.125rem;
+  }
+  footer ul {
+    list-style: none;
+    overflow: hidden;
+  }
+  footer ul li {
+    float: left;
+    margin-right: 90px;
+    line-height: 1;
+  }
+  footer ul li h3 {
+    color: #646464;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 0 0 20px;
+  }
+  footer ul li div a {
+    display: block;
+    color: #969696;
+    font-size: 12px;
+    padding: 7px 0;
+    text-decoration: none;
+  }
+  footer ul li div a:hover {
+    color: blue;
+  }
+  footer .footer-service {
+    position: absolute;
+    right: 60px;
+    overflow: hidden;
+    line-height: 34px;
+    text-align: right;
+  }
+
+  footer .footer-service .online {
+    float: right;
+    top: 15px;
+  }
+  footer .footer-service .online a {
+    display: block;
+    width: 132px;
+    height: 30px;
+    line-height: 30px;
+    background: linear-gradient(#fcfcfc, #f5f5f5);
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: 15px;
+    text-align: center;
+    color: #5079d9;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  footer .footer-service .online a::before {
+    content: "?";
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+    width: 28px;
+    height: 28px;
+    margin-right: -2px;
+    line-height: 28px;
+    background: #5079d9;
+    color: #fff;
+    border-radius: 50%;
+    transform: scale(0.45);
+    font-size: 16px;
+    font-weight: 400;
+  }
+  footer .footer-service .online span {
+    font-size: 12px;
+    height: 28px;
+    line-height: 28px;
+    vertical-align: top;
+    display: inline-block;
+  }
+  footer .footer-service .online a {
+    font-size: 0;
+  }
+  footer > .footer-wrapper {
+    width: 1220px;
+    margin: 0 auto;
+    padding: 20px 10px;
+    box-sizing: border-box;
+  }
+  footer > .footer-wrapper > .footer-menu {
+    position: relative;
+    overflow: hidden;
+    padding: 60px 0 55px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .footer-info {
+    color: #434d55;
+    font-size: 12px;
+    padding: 30px 0 60px;
+    width: 1220px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-top: 1px solid #e6e6e6;
+  }
+  .footer-info ul {
+    overflow: hidden;
+  }
+  .footer-info li {
+    margin-right: 0;
+    padding: 0 10px;
+    border-left: 1px solid #ccc;
+  }
+  .footer-info li:nth-child(1) {
+    padding-left: 0;
+    border-left: 0;
+    color: #bdbdbd;
+  }
+  .footer-info li a {
+    text-decoration: none;
+    color: #bdbdbd;
+  }
+  .footer-info li a:hover {
+    color: blue;
+  }
+  .footer-info .icp {
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .footer-info .icp span {
+    display: inline-block;
+    line-height: 12px;
+    padding-right: 10px;
+    color: #bdbdbd;
+    cursor: pointer;
+    border-left: 1px solid #ccc;
+    padding: 0 10px;
+  }
+  .footer-info .icp span:hover {
+    color: blue;
+  }
+  .footer-info .icp span:nth-child(1) {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .footer-info .icp span:nth-child(2) {
+    position: relative;
+    padding-left: 35px;
+  }
+  .footer-info .icp span:nth-child(2)::before {
+    position: absolute;
+    content: "";
+    top: -5px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background: url(../images/icon.png) no-repeat;
+    background-size: 20px;
+  }

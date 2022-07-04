@@ -1,0 +1,240 @@
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+a{
+  text-decoration: none;
+}
+.main-title {
+  position: static !important;
+}
+
+/* 坚果r2 */
+.R2container {
+  padding: 100px 0;
+}
+
+.R2container ul {
+  width: 1230px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.R2container ul li {
+  float: left;
+  width: calc((100% - 30px)/3);
+  height: 617px;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  margin: 5px;
+  padding: 40px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.item-one {
+  height: 318px;
+  display: flex;
+  justify-content: center;
+}
+
+.item-one img {
+  width: 215px;
+  height: 215px;
+}
+
+.item-two {
+  text-align: center;
+}
+
+.item-two h6 {
+  height: 20px;
+  line-height: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item-two p:nth-child(2) {
+  font-size: 14px;
+  color: gray;
+  font-weight: 300;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item-two p:nth-child(3) {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.item-two p:nth-child(3) i {
+  font-style: normal;
+  font-size: 15px;
+  color: #d44d44;
+}
+
+.item-two p:nth-child(3) span {
+  font-weight: 700;
+  line-height: 25px;
+  color: #d44d44;
+  font-size: 24px;
+}
+
+/* 现在购买按钮 */
+.item-two button {
+  outline: none;
+  border: none;
+  position: inherit;
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  border: 1px solid #5c81e3;
+  border-radius: 6px;
+  background-color: #5c85e5;
+  background-image: linear-gradient(#779ae9, #5078df);
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* 满足大套餐 */
+.computer-container {
+  padding: 100px 0;
+}
+
+.computer-container ul {
+  width: 1230px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.computer-container ul li {
+  float: left;
+  width: calc((100% - 20px)/2);
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  margin: 5px;
+  padding: 40px;
+  box-sizing: border-box;
+  border-radius: 9px;
+  box-shadow: none;
+  height: 340px;
+}
+
+.com-itemone {
+  width: 260px;
+  height: 260px;
+  float: left;
+  margin-right: 13px;
+}
+
+.com-itemone img {
+  width: 260px;
+  height: 260px;
+}
+
+.com-itemtwo {
+  float: left;
+  padding: 35px 0 0;
+  text-align: center;
+}
+
+.com-itemtwo h6 {
+  width: 230px;
+  margin-bottom: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.com-itemtwo p {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.com-itemtwo p:nth-child(2) {
+  width: 230px;
+  margin-bottom: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-size: 14px;
+  color: gray;
+  font-weight: 300;
+}
+
+.com-itemtwo p:nth-child(3) i {
+  font-style: normal;
+  font-size: 15px;
+  color: #d44d44;
+}
+
+.com-itemtwo p:nth-child(3) span {
+  font-weight: 700;
+  line-height: 25px;
+  color: #d44d44;
+  font-size: 24px;
+}
+
+/* 购买按钮 */
+.com-itemtwo button {
+  outline: none;
+  border: none;
+  position: inherit;
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  border: 1px solid #5c81e3;
+  border-radius: 6px;
+  background-color: #5c85e5;
+  background-image: linear-gradient(#779ae9, #5078df);
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h2 {
+  margin-top: 60px;
+  color: #000;
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.title h6 {
+  color: gray;
+  font-size: 18px;
+  margin-bottom: 60px;
+}
+.new{
+  padding: 0 !important;
+}
+.footer{
+  margin-top: 0 !important;
+}

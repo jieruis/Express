@@ -1,0 +1,382 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  background: url(../images/loginbg.png)no-repeat;
+}
+
+/* 登录logo界面 */
+.container {
+  width: 480px;
+  margin-left: -240px;
+  margin-top: -315px;
+  font-weight: 700;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgb(0 0 0 / 15%);
+  background: #fff;
+  width: 450px;
+  border: 1px solid #dadada;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+
+.title {
+  height: 209px;
+  padding: 0;
+  background: #fff;
+  background: url(../images/loginlogo.png)no-repeat center 30px;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.title h4 {
+  height: 29px;
+  line-height: 29px;
+  font-size: 24px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, .8);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* 登录选项 */
+.content {
+  padding: 0 18px 12px;
+}
+
+.content form {
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.conmmon-cotent>li {
+  margin: 14px 0;
+}
+
+/* 国家和地区 */
+.conmmon-cotent li div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 38px;
+  background: rgba(0, 0, 0, .03);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .15);
+  font-size: 15px;
+  line-height: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* .conmmon-cotent li:nth-child(1) div {
+  height: 38px;
+  background: rgba(0, 0, 0, .03);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .15);
+  font-size: 15px;
+  line-height: 40px;
+} */
+
+.conmmon-cotent li:nth-child(1) div span:nth-child(1) {
+  color: rgba(0, 0, 0, .4);
+  text-align: left;
+  margin-left: 12px;
+  font-size: 15px;
+}
+
+.conmmon-cotent li:nth-child(1) div span:nth-child(2) {
+  color: rgba(0, 0, 0, .4);
+  font-size: 12px;
+  right: 11px;
+  background: url(../images/loginarrw.png)no-repeat right center;
+  padding-right: 12px;
+  max-width: 76px;
+  overflow: hidden;
+  margin-right: 11px;
+  cursor: pointer;
+}
+
+.conmmon-cotent li:nth-child(1) div:hover span {
+  color: rgba(0, 0, 0, .6);
+}
+
+/* 电话号码 */
+/* .conmmon-cotent li:nth-child(2) div {
+  height: 38px;
+  background: rgba(0, 0, 0, .03);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .15);
+  font-size: 15px;
+  line-height: 40px;
+  overflow: hidden;
+  position: relative;
+} */
+
+.conmmon-cotent li:nth-child(2) div span {
+  width: 55px;
+  text-align: left;
+  margin-left: 12px;
+}
+
+.conmmon-cotent li:nth-child(2) div label {
+  position: absolute;
+  left: 67px;
+}
+
+.conmmon-cotent li:nth-child(2) div input {
+  border: none;
+  outline: none;
+  flex: 1;
+  background: none;
+  height: 20px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.conmmon-cotent li:nth-child(2) div:hover .area {
+  color: rgba(0, 0, 0, .4);
+}
+
+/* 密码 */
+.conmmon-cotent li:nth-child(3) div input {
+  font-weight: 700;
+  font-size: 15px;
+  color: rgba(0, 0, 0, .6);
+  width: 400px;
+  height: 20px;
+  padding: 12px 12px 12px 15px;
+  box-sizing: border-box;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.conmmon-cotent li:nth-child(3) {
+  margin-bottom: 0;
+}
+
+.conmmon-cotent li:nth-child(3) div label {
+  position: absolute;
+  margin-left: 12px;
+}
+
+.conmmon-cotent li:nth-child(3) div span {
+  width: 40px;
+  height: 40px;
+  background: url(../images/eye-close.png)no-repeat center center;
+  cursor: pointer;
+}
+
+/* 登录服务 */
+#login-service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 12px 0;
+  height: 28px;
+}
+
+#login-service div span {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/checkboxon188421c8c6.png)no-repeat;
+  background-size: 24px;
+  cursor: pointer;
+}
+
+#login-service div {
+  flex: 1;
+  /* display: block; */
+  line-height: 1;
+  border: none;
+  background: none;
+  height: 28px;
+  line-height: 28px;
+  font-size: 13px;
+  color: #999999;
+}
+
+#login-service div a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #5c89f2;
+}
+
+#login-service div a:nth-child(1) {
+  margin-left: 25px;
+  margin-right: 10px;
+  flex: 1;
+}
+
+#login-service div a:nth-child(1)::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-right: 1px solid rgb(0, 0, 0, .15);
+  position: absolute;
+  z-index: 99;
+  top: 7px;
+  left: 108px;
+}
+
+/* 登录按钮 */
+.btn {
+  width: 414px;
+  height: 60px;
+  line-height: 60px;
+  margin: 24px 0 10px 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #5c89f2;
+  opacity: .5;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+  /* cursor: pointer; */
+}
+
+/* 其他登录方式 */
+.info {
+  padding: 2px 6px 0;
+  overflow: hidden;
+}
+
+.info ul li {
+  float: left;
+}
+
+.info ul li:not(:first-child) {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.info ul li:nth-child(1) {
+  color: rgba(0, 0, 0, .4);
+  font-size: 13px;
+  height: 28px;
+  line-height: 28px;
+}
+
+.info ul li:nth-child(2) {
+  background: url(../images/weixin01.png)no-repeat;
+  margin: 6px 0 0 10px;
+}
+
+.info ul li:nth-child(2):hover {
+  background: url(../images/weixin02.png)no-repeat;
+}
+
+.info ul li:nth-child(3) {
+  background: url(../images/weibo01.png)no-repeat;
+  margin: 6px 0 0 15px;
+}
+
+.info ul li:nth-child(3):hover {
+  background: url(../images/weibo02.png)no-repeat;
+}
+
+.info ul li:nth-child(4) {
+  background: url(../images/qq01.png)no-repeat;
+  margin: 6px 0 0 15px;
+}
+
+.info ul li:nth-child(4):hover {
+  background: url(../images/qq02.png)no-repeat;
+}
+
+.info ul li:nth-child(5) {
+  background: url(../images/pay01.png)no-repeat;
+  margin: 6px 0 0 15px;
+}
+
+.info ul li:nth-child(5):hover {
+  background: url(../images/pay02.png)no-repeat;
+}
+
+.info a {
+  float: right;
+  height: 28px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, .4);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.info a:hover {
+  color: #406dd6;
+}
+
+/* 隐私政策 */
+.policy {
+  margin-top: 10px;
+  padding-top: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  border-top: 1px solid rgba(0, 0, 0, .12);
+  width: 100%;
+}
+
+.policy span {
+  display: block;
+  color: rgba(0, 0, 0, .4);
+  display: block;
+  text-align: center;
+}
+
+.policy span a {
+  color: #5C89F2;
+  text-decoration: none;
+}
+
+.policy span a:hover {
+  color: #406dd6;
+}
+
+/* 网页底部 */
+.foot {
+  position: absolute;
+  padding: 0 0 24px;
+  width: 100%;
+  top: 680px;
+}
+
+.foot h2 {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, .4);
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+}
+.foot h4{
+  height: 20px;
+  line-height: 20px;
+  margin-top: 8px;
+  font-size: 14px;
+  padding: 0;
+  font-weight: normal;
+  color: #5C89F2;
+  text-align: center;
+}

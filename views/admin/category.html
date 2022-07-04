@@ -1,0 +1,151 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>商城后台-分类管理</title>
+<!--                       CSS                       -->
+<!-- Reset Stylesheet -->
+<link rel="stylesheet" href="{{baseurl}}/admin/css/reset.css" type="text/css" media="screen" />
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="{{baseurl}}/admin/css/style.css" type="text/css" media="screen" />
+<!-- Invalid Stylesheet. This makes stuff look pretty. Remove it if you want the CSS completely valid -->
+<link rel="stylesheet" href="{{baseurl}}/admin/css/invalid.css" type="text/css" media="screen" />
+<!--                       Javascripts                       -->
+<!-- jQuery -->
+<script type="text/javascript" src="{{baseurl}}/admin/scripts/jquery-1.3.2.min.js"></script>
+<!-- jQuery Configuration -->
+<script type="text/javascript" src="{{baseurl}}/admin/scripts/simpla.jquery.configuration.js"></script>
+<!-- Facebox jQuery Plugin -->
+<script type="text/javascript" src="{{baseurl}}/admin/scripts/facebox.js"></script>
+<!-- jQuery WYSIWYG Plugin -->
+<script type="text/javascript" src="{{baseurl}}/admin/scripts/jquery.wysiwyg.js"></script>
+<!-- jQuery Datepicker Plugin -->
+<script type="text/javascript" src="{{baseurl}}/admin/scripts/jquery.datePicker.js"></script>
+<script type="text/javascript" src="{{baseurl}}/admin/scripts/jquery.date.js"></script>
+</head>
+<body>
+<div id="body-wrapper">
+  <!-- Wrapper for the radial gradient background -->
+  <div id="sidebar">
+    <div id="sidebar-wrapper">
+      <!-- Sidebar with logo and menu -->
+      <h1 id="sidebar-title"><a href="#">Simpla Admin</a></h1>
+      <!-- Logo (221px wide) -->
+      <a href="{{baseurl}}admin"><img id="logo" src="{{baseurl}}/admin/images/logo-chuizi.png" alt="Simpla Admin logo" /></a>
+      <!-- Sidebar Profile links -->
+      <div id="profile-links"> 你好, <a href="#" title="Edit your profile" id="uname">865171</a>&nbsp;&nbsp;
+      <a href="{{baseurl}}admin/logout" title="Sign Out">退出</a> </div>
+      <ul id="main-nav">
+        <!-- Accordion Menu -->
+        <li> <a href="{{baseurl}}admin" class="nav-top-item no-submenu">
+          <!-- 添加no-submenu样式表示没有子菜单 -->
+          网站首页 </a> </li>
+        <li> <a href="{{baseurl}}category" class="nav-top-item current">
+          <!-- 添加current样式，表示为当前选中的模块 -->
+          商品分类 </a>
+          <ul>
+            <!--选中的子菜单添加current样式-->
+            <li><a href="{{baseurl}}category/add">分类新增</a></li>
+            <li><a href="{{baseurl}}category" class="current">分类管理</a></li>
+          </ul>
+        </li>
+        <li> <a href="{{baseurl}}goods" class="nav-top-item"> 商品列表 </a>
+          <ul>
+            <li><a href="{{baseurl}}goods/add">商品新增</a></li>
+            <li><a href="{{baseurl}}goods">商品管理</a></li>
+          </ul>
+        </li>
+        <li> <a href="#" class="nav-top-item"> 管理员 </a>
+          <ul>
+            <li><a href="#">管理员新增</a></li>
+            <li><a href="#">管理员列表</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="main-content">
+    <div class="content-box">
+      <!-- Start Content Box -->
+      <div class="content-box-header">
+        <h3>分类管理</h3>
+        <ul class="content-box-tabs">
+          <li><a href="#tab1" class="default-tab">Table</a></li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <!-- End .content-box-header -->
+      <div class="content-box-content">
+        <div class="tab-content default-tab" id="tab1">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <input class="check-all" type="checkbox" />
+                </th>
+                <th>分类id</th>
+                <th>分类名称</th>
+                <th>用户id</th>
+                <th>上级分类</th>
+                <th>管理</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <td colspan="6">
+                  <div class="bulk-actions align-left">
+                    <select name="dropdown">
+                      <option value="option1">Choose an action...</option>
+                      <option value="option2">Edit</option>
+                      <option value="option3">Delete</option>
+                    </select>
+                    <a class="button" href="#">Apply to selected</a> </div>
+                  <div class="pagination"> <a href="#" title="First Page">&laquo; First</a><a href="#" title="Previous Page">&laquo; Previous</a> <a href="#" class="number" title="1">1</a> <a href="#" class="number" title="2">2</a> <a href="#" class="number current" title="3">3</a> <a href="#" class="number" title="4">4</a> <a href="#" title="Next Page">Next &raquo;</a><a href="#" title="Last Page">Last &raquo;</a> </div>
+                  <!-- End .pagination -->
+                  <div class="clear"></div>
+                </td>
+              </tr>
+            </tfoot>
+            <tbody>
+            {{each category c }}
+              <tr>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td>{{c.cid}}</td>
+                <td><a href="#" title="title">{{c.cname}}</a></td>
+                <td>{{c.uid}}</td>
+                <td>{{c.pid}}</td>
+                <td>
+                  <a href="{{baseurl}}category/update?cid={{c.cid}}" title="Edit">
+                  <img src="{{baseurl}}/admin/images/icons/pencil.png" alt="Edit" /></a> 
+                  <a href="{{baseurl}}category/del?cid={{c.cid}}" onclick="del()" title="Delete" class="del">
+                  <img src="{{baseurl}}/admin/images/icons/cross.png" alt="Delete" /></a>
+                </td>
+              </tr>
+            {{/each}}
+            </tbody>
+          </table>
+        </div>
+        <!-- End #tab1 -->
+      </div>
+      <!-- End .content-box-content -->
+    </div>
+</div>
+</body>
+</html>
+<script>
+let cookies = Object.assign({},...document.cookie.split("; ").map(val=>{
+  let tmp = val.split("=");
+  return {[tmp[0]]:tmp[1]};
+}));  //获取服务端生成的cookie
+//[{uid:2},{uname:"admin"}]=>{uid:2,uname:"admin"}
+$("#uname").html(cookies.uname);
+
+function del() {
+  if(confirm("确定要执行删除操作吗？")){
+    return true;
+  }
+  return false;
+  // window.location.href="${baseurl}admin/category/del?cid=${value.cid}";
+}
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>storage读取</title>
+</head>
+<body>
+  
+</body>
+</html>
+<script>
+//1.以对象的方式访问
+document.write(sessionStorage.name);
+document.write(sessionStorage["age"]);
+
+//2.storage对象方法
+document.write(sessionStorage.getItem("tel"));
+
+//销毁storage
+// delete sessionStorage.age;
+
+//销毁单个值
+// sessionStorage.removeItem("age");
+//销毁所有值
+// sessionStorage.clear(); 
+
+//获取storage的长度
+console.log(sessionStorage.length);
+//获取storage name值
+console.log(sessionStorage.key(0));
+</script>

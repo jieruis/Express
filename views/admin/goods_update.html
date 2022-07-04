@@ -1,0 +1,157 @@
+\\\\\\\\\\\\\\\\\、、、、、、、<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>商城后台-报表</title>
+<!--                       CSS                       -->
+<!-- Reset Stylesheet -->
+<link rel="stylesheet" href="{{baseurl}}/admin/css/reset.css" type="text/css" media="screen" />
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="{{baseurl}}/admin/css/style.css" type="text/css" media="screen" />
+<!-- Invalid Stylesheet. This makes stuff look pretty. Remove it if you want the CSS completely valid -->
+<link rel="stylesheet" href="{{baseurl}}/admin/css/invalid.css" type="text/css" media="screen" />
+<!--                       Javascripts                       -->
+<!-- jQuery -->
+<script type="text/javascript" src="{{baseurl}}/admin/scripts/jquery-1.3.2.min.js"></script>
+<!-- jQuery Configuration -->
+<script type="text/javascript" src="{{baseurl}}/admin/scripts/simpla.jquery.configuration.js"></script>
+<!-- Facebox jQuery Plugin -->
+<script type="text/javascript" src="{{baseurl}}/admin/scripts/facebox.js"></script>
+<!-- jQuery WYSIWYG Plugin -->
+<script type="text/javascript" src="{{baseurl}}/admin/scripts/jquery.wysiwyg.js"></script>
+<!-- jQuery Datepicker Plugin -->
+<script type="text/javascript" src="{{baseurl}}/admin/scripts/jquery.datePicker.js"></script>
+<script type="text/javascript" src="{{baseurl}}/admin/scripts/jquery.date.js"></script>
+</head>
+<body>
+<div id="body-wrapper">
+  <!-- Wrapper for the radial gradient background -->
+  <div id="sidebar">
+    <div id="sidebar-wrapper">
+      <!-- Sidebar with logo and menu -->
+      <h1 id="sidebar-title"><a href="#">Simpla Admin</a></h1>
+      <!-- Logo (221px wide) -->
+      <a href="http://www.865171.cn"><img id="logo" src="{{baseurl}}/admin/images/logo-chuizi.png" alt="Simpla Admin logo" /></a>
+      <!-- Sidebar Profile links -->
+      <div id="profile-links"> 你好, <a href="#" title="Edit your profile" id="uname">865171</a>&nbsp;&nbsp;
+        <a href="{{baseurl}}admin/logout" title="Sign Out">退出</a> </div>
+      <ul id="main-nav">
+        <!-- Accordion Menu -->
+        <li> <a href="{{baseurl}}admin" class="nav-top-item no-submenu">
+          <!-- 添加no-submenu样式表示没有子菜单 -->
+          网站首页 </a> </li>
+        <li> <a href="{{baseurl}}category" class="nav-top-item">
+          <!-- 添加current样式，表示为当前选中的模块 -->
+          商品分类 </a>
+          <ul>
+            <!--选中的子菜单添加current样式-->
+            <li><a href="{{baseurl}}category/add">分类新增</a></li>
+            <li><a href="{{baseurl}}category">分类管理</a></li>
+          </ul>
+        </li>
+        <li> <a href="{{baseurl}}goods" class="nav-top-item current"> 商品列表 </a>
+          <ul>
+            <li><a href="{{baseurl}}goods/add"  >商品新增</a></li>
+            <li><a href="{{baseurl}}goods" class="current">商品管理</a></li>
+          </ul>
+        </li>
+        <li> <a href="#" class="nav-top-item"> 管理员 </a>
+          <ul>
+            <li><a href="#">管理员新增</a></li>
+            <li><a href="#">管理员列表</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="main-content">
+    <div class="content-box">
+      <!-- Start Content Box -->
+      <div class="content-box-header">
+        <h3>商品更新</h3>
+        <ul class="content-box-tabs">
+          <li><a href="#tab2" class="default-tab">Forms</a></li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <!-- End .content-box-header -->
+      <div class="content-box-content">
+        <div class="tab-content default-tab" id="tab2">
+          <!-- action填了就指向所填地址，不填默认指向当前所在地址 -->
+          <form action="" method="post" enctype="multipart/form-data">
+            <fieldset>
+            <p>
+              <label>商品名称</label>
+              <input class="text-input small-input" type="text" id="small-input" name="gname" value="{{goods.gname}}"/>
+            </p>
+            <p>
+              <label>商品价格</label>
+              <input class="text-input small-input" type="number" id="small-input" name="price" value="{{goods.price}}"/>
+            </p>
+            <p>
+              <label>促销价格</label>
+              <input class="text-input small-input" type="number" id="small-input" name="sprice" value="{{goods.sprice}}"/>
+            </p>
+            <p>
+              <label>库存数量</label>
+              <input class="text-input small-input" type="number" id="small-input" name="num" value="{{goods.num}}" />
+            </p>
+            <p>
+              <label>缩略图</label>
+              <input class="text-input small-input" type="file" id="small-input" name="pic" value="{{pic}}"/>
+            </p>
+            <p>
+              <label>商品分类</label>
+              <select name="cid" class="small-input">
+                {{each topCates c}}
+                <option value="{{c.cid}}">{{c.cname}}</option>
+                {{/each}}
+              </select>
+            </p>
+            <p>
+              <label>商品描述</label>
+              <textarea class="text-input textarea wysiwyg" id="textarea" name="description" cols="79" rows="15"></textarea>
+            </p>
+            <p>
+              <input class="button" type="submit" value="Submit" onclick="update()"/>
+            </p>
+            </fieldset>
+            <div class="clear"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="{{baseurl}}js/axios.min.js"></script>
+<script>
+let cookies = Object.assign({},...document.cookie.split("; ").map(val=>{
+  let tmp = val.split("=");
+  return {[tmp[0]]:tmp[1]};
+}));  //获取服务端生成的cookie
+//[{uid:2},{uname:"admin"}]=>{uid:2,uname:"admin"}
+$("#uname").html(cookies.uname);
+
+//选择分类
+$("select").live("change",function(){
+  axios.get("{{baseurl}}category/getChildCates?pid="+$(this).val()).then(data=>{
+    if(data.data.errCode == 0 && data.data.result.length > 0){
+      $(this).nextAll().remove();
+      let select = `<select name="cid" class="small-input">`;
+        data.data.result.forEach(v=>{
+          select += `<option value="${v.cid}">${v.cname}</option>`;
+        })
+      select += "</select>";
+      $(this).after(select);
+    }
+  })
+})
+
+
+function update() {
+  if(confirm("新增成功~")){
+    return true;
+  }
+  return false;
+}
+</script>
